@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.js"></script>
+  </head>
+  <body>
+
+
+    <div class="test" id="test">
+      <div class="test__wrapper">
+        <ul class="test__list">
+          <li class="test__items" id="1">
+            <input class="test__number" v-model.number="number1" type="number" min="1" max="99">
+            <span class="test__line"></span>
+            <input class="test__number" v-model.number="number2" type="number" min="1" max="99">
+            <button v-on:click="remove" class="test__delete hidden">Убрать дробь</button>
+          </li>
+          <li class="test__items" id="2">
+            <input class="test__number" v-model.number="number3" type="number" min="1" max="99">
+            <span class="test__line"></span>
+            <input class="test__number" v-model.number="number4" type="number" min="1" max="99">
+            <button v-on:click="remove" class="test__delete hidden">Убрать дробь</button>
+          </li>
+          <li class="test__items hidden" id="3">
+            <input class="test__number" v-model.number="number5" type="number" min="1" max="99">
+            <span class="test__line"></span>
+            <input class="test__number" v-model.number="number6" type="number" min="1" max="99">
+            <button v-on:click="remove" class="test__delete hidden">Убрать дробь</button>
+          </li>
+          <li class="test__items hidden" id="4">
+            <input class="test__number" v-model.number="number7" type="number" min="1" max="99">
+            <span class="test__line"></span>
+            <input class="test__number" v-model.number="number8" type="number" min="1" max="99">
+            <button v-on:click="remove" class="test__delete hidden">Убрать дробь</button>
+          </li>
+          <li class="test__items hidden" id="5">
+            <input class="test__number" v-model.number="number9" type="number" min="1" max="99">
+            <span class="test__line"></span>
+            <input class="test__number" v-model.number="number10" type="number" min="1" max="99">
+            <button v-on:click="remove" class="test__delete hidden">Убрать дробь</button>
+          </li>
+        </ul>
+        <span class="test__equally">=</span>
+        <p class="text__result">{{result}}</p>
+      </div>
+      <button class="test__add" v-on:click="add">Добавить дробь</button>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
